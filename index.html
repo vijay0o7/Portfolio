@@ -1,55 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="Photo.jpg"  />
+  <head>
+    <!-- ✅ Favicon fix to prevent console warning -->
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
 
-  <!-- Primary Meta Tags -->
-  <title>Vijay S – Full Stack Web Developer</title>
-  <meta name="title" content="Vijay S – Full Stack Web Developer" />
-  <meta name="description" content="I am a dedicated Computer Science Engineering student driven by a passion for technology and innovation. I have a solid foundation in programming and a strong grasp of software development, data structures, and machine learning. My hands-on projects demonstrate my problem-solving and full-stack capabilities." />
-  <meta name="keywords" content="Vijay, Vijay S, Android Developer, Web Developer, Portofolio Vijay, Vijay" />
-  <meta name="google-site-verification" content="ZYNfZwMUiNwSMF3EMvY85bid2BVvB12uMMRfUNWw75A" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="theme-color" content="#030014" />
-  <meta name="msapplication-navbutton-color" content="#030014" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Title and SEO Meta Tags -->
+    <title>Vijay S – Full Stack Web Developer</title>
+    <meta name="title" content="Vijay S – Full Stack Web Developer" />
+    <meta name="description" content="I am a dedicated Computer Science Engineering student driven by a passion for technology and innovation. I have a solid foundation in programming and a strong grasp of software development, data structures, and machine learning. My hands-on projects demonstrate my problem-solving and full-stack capabilities." />
+    <meta name="keywords" content="Vijay, Vijay S, Android Developer, Web Developer, Portofolio Vijay, Vijay" />
 
- 
+    <!-- Mobile App Meta Tags -->
+    <meta name="google-site-verification" content="ZYNfZwMUiNwSMF3EMvY85bid2BVvB12uMMRfUNWw75A" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#030014" />
+    <meta name="msapplication-navbutton-color" content="#030014" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-  <!-- Structured Data JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "itemListElement": [
+    <!-- If you want to use your own image instead of dummy icon, place Photo.jpg in public/ and uncomment this -->
+    <!-- <link rel="icon" type="image/png" href="/portofolio-v5/Photo.jpg" /> -->
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
       {
-        "@type": "SiteNavigationElement",
-        "name": "Home",
-      },
-      {
-        "@type": "SiteNavigationElement",
-        "name": "About",
-      },
-      {
-        "@type": "SiteNavigationElement",
-        "name": "Portofolio",
-      },
-      {
-        "@type": "SiteNavigationElement",
-        "name": "Contact",
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+          { "@type": "SiteNavigationElement", "name": "Home" },
+          { "@type": "SiteNavigationElement", "name": "About" },
+          { "@type": "SiteNavigationElement", "name": "Portofolio" },
+          { "@type": "SiteNavigationElement", "name": "Contact" }
+        ]
       }
-    ]
-  }
-  </script>
-</head>
+    </script>
+  </head>
 
   <body>
     <div id="root"></div>
-
-
+    <!-- ❌ DO NOT add any script src here; Vite injects bundled scripts automatically during build -->
   </body>
 </html>
