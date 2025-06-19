@@ -99,15 +99,22 @@ export default function FullWidthTabs() {
   }, []);
 
   const fetchProjects = useCallback(async () => {
-    try {
-      const localProjectData = localStorage.getItem("projects");
-      if (localProjectData) {
-        setProjects(JSON.parse(localProjectData));
-      }
-    } catch (error) {
-      console.error("Error fetching projects:", error);
+  try {
+    const localProjectData = localStorage.getItem("projects");
+    if (localProjectData) {
+      setProjects(JSON.parse(localProjectData));
+    } else {
+      const response = await fetch("/data/projects.json");
+      const data = await response.json();
+      setProjects(data);
+      localStorage.setItem("projects", JSON.stringify(data));
     }
-  }, []);
+  } catch (error) {
+    console.error("Error fetching local projects:", error);
+  }
+}, []);
+
+
 
   useEffect(() => {
     fetchProjects();

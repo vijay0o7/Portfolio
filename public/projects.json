@@ -1,0 +1,18 @@
+[
+  {
+    "id": "Guardian Circle",
+    "Title": "Guardian circle",
+    "Img": "/images/image.png",
+    "Description": "This app is designed to enhance women's safety by acting as a virtual companion before and during travel, especially at night or in risky situations. Guardian Circle helps prevent emergencies by offering live tracking, automated alerts, and silent SOS triggers. Its main goal is to make women feel safer and more confident when alone.",
+    "Features": [
+      "Live tracking by selected 'Guardians' (family/friends) during travel or outings.",
+      "Travel timer that alerts guardians automatically if the user doesn't arrive on time.",
+      "Automatic audio/video recording during emergencies, sent to guardians.",
+      "Integration with public transport and nearby police station info",
+      "Emergency button widget on lock screen + geotag location sent to selected guardian."
+    ],
+    "Github": "https://github.com/vijay0o7"
+
+}
+  
+]
