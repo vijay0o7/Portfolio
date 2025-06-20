@@ -80,7 +80,7 @@ const TYPING_SPEED = 100;
 const ERASING_SPEED = 50;
 const PAUSE_DURATION = 2000;
 const WORDS = ["CS Engineering Student", "Android Developer"];
-const TECH_STACK = ["Java", "Python", "Javascript", "Android Studio"];
+const TECH_STACK = ["Java", "Python", "Javascript", "Kotlin"];
 const SOCIAL_LINKS = [
   { icon: Github, link: "https://github.com/vijay0o7" },
   { icon: Linkedin, link: "https://www.linkedin.com/in/vijay-s-70a810265/" },
