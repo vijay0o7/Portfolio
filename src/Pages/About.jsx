@@ -83,7 +83,26 @@ const StatCard = memo(({ icon: Icon, color, value, label, description, animation
 
 const AboutPage = () => {
   const { totalProjects, totalCertificates, YearExperience } = useMemo(() => {
-    const storedProjects = JSON.parse(localStorage.getItem("projects") || "[]");
+    const storedProjects = useMemo(() => {
+  const local = localStorage.getItem("projects");
+  if (local) return JSON.parse(local);
+
+  // fallback fetch from public/data/projects.json
+  try {
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", "/data/projects.json", false); // synchronous
+    xhr.send(null);
+    if (xhr.status === 200) {
+      const projects = JSON.parse(xhr.responseText);
+      localStorage.setItem("projects", JSON.stringify(projects));
+      return projects;
+    }
+  } catch (error) {
+    console.error("Unable to load fallback project data", error);
+  }
+  return [];
+}, []);
+
 
     const startDate = new Date("2021-11-06");
     const today = new Date();
