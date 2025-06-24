@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Code2, Github, Globe, User } from 'lucide-react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Code2, Github, Globe, User } from "lucide-react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const TypewriterEffect = ({ text }) => {
-  const [displayText, setDisplayText] = useState('');
+  const [displayText, setDisplayText] = useState("");
 
   useEffect(() => {
     let index = 0;
@@ -68,11 +68,11 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
     exit: {
       opacity: 0,
       scale: 1.1,
-      filter: 'blur(10px)',
+      filter: "blur(10px)",
       transition: {
         duration: 0.8,
-        ease: 'easeInOut',
-        when: 'beforeChildren',
+        ease: "easeInOut",
+        when: "beforeChildren",
         staggerChildren: 0.1,
       },
     },
@@ -84,7 +84,7 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
       opacity: 0,
       transition: {
         duration: 0.4,
-        ease: 'easeInOut',
+        ease: "easeInOut",
       },
     },
   };
@@ -141,7 +141,7 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
                       className="inline-block px-2 bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent"
                     >
                       Full-Stack & Android
-                    </span>{' '}
+                    </span>{" "}
                     <span
                       data-aos="fade-up"
                       data-aos-delay="600"

@@ -30,8 +30,8 @@ const ContactPage = () => {
     setIsSubmitting(true);
 
     Swal.fire({
-      title: 'Sending Message...',
-      html: 'Please wait while we send your message',
+      title: "Sending Message...",
+      html: "Please wait while we send your message",
       allowOutsideClick: false,
       didOpen: () => Swal.showLoading(),
     });
@@ -42,10 +42,10 @@ const ContactPage = () => {
       await form.submit();
 
       Swal.fire({
-        title: 'Success!',
-        text: 'Your message has been sent successfully!',
-        icon: 'success',
-        confirmButtonColor: '#6366f1',
+        title: "Success!",
+        text: "Your message has been sent successfully!",
+        icon: "success",
+        confirmButtonColor: "#6366f1",
         timer: 2000,
         timerProgressBar: true,
       });
@@ -57,10 +57,10 @@ const ContactPage = () => {
       });
     } catch (error) {
       Swal.fire({
-        title: 'Error!',
-        text: 'Something went wrong. Please try again later.',
-        icon: 'error',
-        confirmButtonColor: '#6366f1',
+        title: "Error!",
+        text: "Something went wrong. Please try again later.",
+        icon: "error",
+        confirmButtonColor: "#6366f1",
       });
     } finally {
       setIsSubmitting(false);
@@ -78,7 +78,8 @@ const ContactPage = () => {
           <span
             style={{
               color: "#6366f1",
-              backgroundImage: "linear-gradient(45deg, #6366f1 10%, #a855f7 93%)",
+              backgroundImage:
+                "linear-gradient(45deg, #6366f1 10%, #a855f7 93%)",
               WebkitBackgroundClip: "text",
               backgroundClip: "text",
               WebkitTextFillColor: "transparent",
@@ -96,7 +97,10 @@ const ContactPage = () => {
         </p>
       </div>
 
-      <div className="h-auto py-10 flex items-center justify-center px-[5%] md:px-0" id="Contact">
+      <div
+        className="h-auto py-10 flex items-center justify-center px-[5%] md:px-0"
+        id="Contact"
+      >
         <div className="container max-w-3xl">
           <div className="bg-white/5 backdrop-blur-xl rounded-3xl shadow-2xl p-5 py-10 sm:p-10 transform transition-all duration-500 hover:shadow-[#6366f1]/10">
             <div className="flex justify-between items-start mb-8">
@@ -120,7 +124,11 @@ const ContactPage = () => {
               <input type="hidden" name="_template" value="table" />
               <input type="hidden" name="_captcha" value="false" />
 
-              <div data-aos="fade-up" data-aos-delay="100" className="relative group">
+              <div
+                data-aos="fade-up"
+                data-aos-delay="100"
+                className="relative group"
+              >
                 <User className="absolute left-4 top-4 w-5 h-5 text-gray-400 group-focus-within:text-[#6366f1] transition-colors" />
                 <input
                   type="text"
@@ -134,7 +142,11 @@ const ContactPage = () => {
                 />
               </div>
 
-              <div data-aos="fade-up" data-aos-delay="200" className="relative group">
+              <div
+                data-aos="fade-up"
+                data-aos-delay="200"
+                className="relative group"
+              >
                 <Mail className="absolute left-4 top-4 w-5 h-5 text-gray-400 group-focus-within:text-[#6366f1] transition-colors" />
                 <input
                   type="email"
@@ -148,7 +160,11 @@ const ContactPage = () => {
                 />
               </div>
 
-              <div data-aos="fade-up" data-aos-delay="300" className="relative group">
+              <div
+                data-aos="fade-up"
+                data-aos-delay="300"
+                className="relative group"
+              >
                 <MessageSquare className="absolute left-4 top-4 w-5 h-5 text-gray-400 group-focus-within:text-[#6366f1] transition-colors" />
                 <textarea
                   name="message"
@@ -169,7 +185,7 @@ const ContactPage = () => {
                 className="w-full bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-white py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#6366f1]/20 active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
                 <Send className="w-5 h-5" />
-                {isSubmitting ? 'Sending...' : 'Send Message'}
+                {isSubmitting ? "Sending..." : "Send Message"}
               </button>
             </form>
 

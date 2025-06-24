@@ -36,9 +36,15 @@ const ToggleButton = ({ onClick, isShowingMore }) => (
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className={`transition-transform duration-300 ${isShowingMore ? "group-hover:-translate-y-0.5" : "group-hover:translate-y-0.5"}`}
+        className={`transition-transform duration-300 ${
+          isShowingMore
+            ? "group-hover:-translate-y-0.5"
+            : "group-hover:translate-y-0.5"
+        }`}
       >
-        <polyline points={isShowingMore ? "18 15 12 9 6 15" : "6 9 12 15 18 9"}></polyline>
+        <polyline
+          points={isShowingMore ? "18 15 12 9 6 15" : "6 9 12 15 18 9"}
+        ></polyline>
       </svg>
     </span>
     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-500/50 transition-all duration-300 group-hover:w-full"></span>
@@ -47,7 +53,13 @@ const ToggleButton = ({ onClick, isShowingMore }) => (
 
 function TabPanel({ children, value, index, ...other }) {
   return (
-    <div role="tabpanel" hidden={value !== index} id={`full-width-tabpanel-${index}`} aria-labelledby={`full-width-tab-${index}`} {...other}>
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`full-width-tabpanel-${index}`}
+      aria-labelledby={`full-width-tab-${index}`}
+      {...other}
+    >
       {value === index && (
         <Box sx={{ p: { xs: 1, sm: 3 } }}>
           <Typography>{children}</Typography>
@@ -99,22 +111,20 @@ export default function FullWidthTabs() {
   }, []);
 
   const fetchProjects = useCallback(async () => {
-  try {
-    const localProjectData = localStorage.getItem("projects");
-    if (localProjectData) {
-      setProjects(JSON.parse(localProjectData));
-    } else {
-      const response = await fetch("/data/projects.json");
-      const data = await response.json();
-      setProjects(data);
-      localStorage.setItem("projects", JSON.stringify(data));
+    try {
+      const localProjectData = localStorage.getItem("projects");
+      if (localProjectData) {
+        setProjects(JSON.parse(localProjectData));
+      } else {
+        const response = await fetch("/data/projects.json");
+        const data = await response.json();
+        setProjects(data);
+        localStorage.setItem("projects", JSON.stringify(data));
+      }
+    } catch (error) {
+      console.error("Error fetching local projects:", error);
     }
-  } catch (error) {
-    console.error("Error fetching local projects:", error);
-  }
-}, []);
-
-
+  }, []);
 
   useEffect(() => {
     fetchProjects();
@@ -132,25 +142,41 @@ export default function FullWidthTabs() {
     }
   }, []);
 
-  const displayedProjects = showAllProjects ? projects : projects.slice(0, initialItems);
-  const displayedCertificates = showAllCertificates ? localCertificates : localCertificates.slice(0, initialItems);
+  const displayedProjects = showAllProjects
+    ? projects
+    : projects.slice(0, initialItems);
+  const displayedCertificates = showAllCertificates
+    ? localCertificates
+    : localCertificates.slice(0, initialItems);
 
   return (
-    <div className="md:px-[10%] px-[5%] w-full sm:mt-0 mt-[3rem] bg-[#030014] overflow-hidden" id="Portofolio">
-      <div className="text-center pb-10" data-aos="fade-up" data-aos-duration="1000">
+    <div
+      className="md:px-[10%] px-[5%] w-full sm:mt-0 mt-[3rem] bg-[#030014] overflow-hidden"
+      id="Portofolio"
+    >
+      <div
+        className="text-center pb-10"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         <h2 className="inline-block text-3xl md:text-5xl font-bold text-center mx-auto text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]">
-          <span style={{
-            color: '#6366f1',
-            backgroundImage: 'linear-gradient(45deg, #6366f1 10%, #a855f7 93%)',
-            WebkitBackgroundClip: 'text',
-            backgroundClip: 'text',
-            WebkitTextFillColor: 'transparent'
-          }}>
+          <span
+            style={{
+              color: "#6366f1",
+              backgroundImage:
+                "linear-gradient(45deg, #6366f1 10%, #a855f7 93%)",
+              WebkitBackgroundClip: "text",
+              backgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
             Portfolio Showcase
           </span>
         </h2>
         <p className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base mt-2">
-          Explore my journey through projects, certifications, and technical expertise. Each section represents a milestone in my continuous learning path.
+          Explore my journey through projects, certifications, and technical
+          expertise. Each section represents a milestone in my continuous
+          learning path.
         </p>
       </div>
 
@@ -171,7 +197,8 @@ export default function FullWidthTabs() {
               left: 0,
               right: 0,
               bottom: 0,
-              background: "linear-gradient(180deg, rgba(139, 92, 246, 0.03) 0%, rgba(59, 130, 246, 0.03) 100%)",
+              background:
+                "linear-gradient(180deg, rgba(139, 92, 246, 0.03) 0%, rgba(59, 130, 246, 0.03) 100%)",
               backdropFilter: "blur(10px)",
               zIndex: 0,
             },
@@ -206,7 +233,8 @@ export default function FullWidthTabs() {
                 },
                 "&.Mui-selected": {
                   color: "#fff",
-                  background: "linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(59, 130, 246, 0.2))",
+                  background:
+                    "linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(59, 130, 246, 0.2))",
                   boxShadow: "0 4px 15px -3px rgba(139, 92, 246, 0.2)",
                   "& .lucide": {
                     color: "#a78bfa",
@@ -221,21 +249,55 @@ export default function FullWidthTabs() {
               },
             }}
           >
-            <Tab icon={<Code className="mb-2 w-5 h-5 transition-all duration-300" />} label="Projects" {...a11yProps(0)} />
-            <Tab icon={<Award className="mb-2 w-5 h-5 transition-all duration-300" />} label="Certificates" {...a11yProps(1)} />
-            <Tab icon={<Boxes className="mb-2 w-5 h-5 transition-all duration-300" />} label="Tech Stack" {...a11yProps(2)} />
+            <Tab
+              icon={
+                <Code className="mb-2 w-5 h-5 transition-all duration-300" />
+              }
+              label="Projects"
+              {...a11yProps(0)}
+            />
+            <Tab
+              icon={
+                <Award className="mb-2 w-5 h-5 transition-all duration-300" />
+              }
+              label="Certificates"
+              {...a11yProps(1)}
+            />
+            <Tab
+              icon={
+                <Boxes className="mb-2 w-5 h-5 transition-all duration-300" />
+              }
+              label="Tech Stack"
+              {...a11yProps(2)}
+            />
           </Tabs>
         </AppBar>
 
-        <SwipeableViews axis={theme.direction === "rtl" ? "x-reverse" : "x"} index={value} onChangeIndex={setValue}>
+        <SwipeableViews
+          axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+          index={value}
+          onChangeIndex={setValue}
+        >
           <TabPanel value={value} index={0} dir={theme.direction}>
             <div className="container mx-auto flex justify-center items-center overflow-hidden">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 gap-5">
                 {displayedProjects.map((project, index) => (
                   <div
                     key={project.id || index}
-                    data-aos={index % 3 === 0 ? "fade-up-right" : index % 3 === 1 ? "fade-up" : "fade-up-left"}
-                    data-aos-duration={index % 3 === 0 ? "1000" : index % 3 === 1 ? "1200" : "1000"}
+                    data-aos={
+                      index % 3 === 0
+                        ? "fade-up-right"
+                        : index % 3 === 1
+                        ? "fade-up"
+                        : "fade-up-left"
+                    }
+                    data-aos-duration={
+                      index % 3 === 0
+                        ? "1000"
+                        : index % 3 === 1
+                        ? "1200"
+                        : "1000"
+                    }
                   >
                     <CardProject {...project} />
                   </div>
@@ -244,7 +306,10 @@ export default function FullWidthTabs() {
             </div>
             {projects.length > initialItems && (
               <div className="mt-6 w-full flex justify-start">
-                <ToggleButton onClick={() => toggleShowMore("projects")} isShowingMore={showAllProjects} />
+                <ToggleButton
+                  onClick={() => toggleShowMore("projects")}
+                  isShowingMore={showAllProjects}
+                />
               </div>
             )}
           </TabPanel>
@@ -255,8 +320,20 @@ export default function FullWidthTabs() {
                 {displayedCertificates.map((certificate, index) => (
                   <div
                     key={index}
-                    data-aos={index % 3 === 0 ? "fade-up-right" : index % 3 === 1 ? "fade-up" : "fade-up-left"}
-                    data-aos-duration={index % 3 === 0 ? "1000" : index % 3 === 1 ? "1200" : "1000"}
+                    data-aos={
+                      index % 3 === 0
+                        ? "fade-up-right"
+                        : index % 3 === 1
+                        ? "fade-up"
+                        : "fade-up-left"
+                    }
+                    data-aos-duration={
+                      index % 3 === 0
+                        ? "1000"
+                        : index % 3 === 1
+                        ? "1200"
+                        : "1000"
+                    }
                   >
                     <Certificate ImgSertif={certificate.img} />
                   </div>
@@ -265,7 +342,10 @@ export default function FullWidthTabs() {
             </div>
             {localCertificates.length > initialItems && (
               <div className="mt-6 w-full flex justify-start">
-                <ToggleButton onClick={() => toggleShowMore("certificates")} isShowingMore={showAllCertificates} />
+                <ToggleButton
+                  onClick={() => toggleShowMore("certificates")}
+                  isShowingMore={showAllCertificates}
+                />
               </div>
             )}
           </TabPanel>
@@ -276,10 +356,25 @@ export default function FullWidthTabs() {
                 {techStacks.map((stack, index) => (
                   <div
                     key={index}
-                    data-aos={index % 3 === 0 ? "fade-up-right" : index % 3 === 1 ? "fade-up" : "fade-up-left"}
-                    data-aos-duration={index % 3 === 0 ? "1000" : index % 3 === 1 ? "1200" : "1000"}
+                    data-aos={
+                      index % 3 === 0
+                        ? "fade-up-right"
+                        : index % 3 === 1
+                        ? "fade-up"
+                        : "fade-up-left"
+                    }
+                    data-aos-duration={
+                      index % 3 === 0
+                        ? "1000"
+                        : index % 3 === 1
+                        ? "1200"
+                        : "1000"
+                    }
                   >
-                    <TechStackIcon TechStackIcon={stack.icon} Language={stack.language} />
+                    <TechStackIcon
+                      TechStackIcon={stack.icon}
+                      Language={stack.language}
+                    />
                   </div>
                 ))}
               </div>

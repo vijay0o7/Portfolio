@@ -1,5 +1,5 @@
-import React from 'react';
-import { Home, ArrowLeft } from 'lucide-react';
+import React from "react";
+import { Home, ArrowLeft } from "lucide-react";
 
 export default function NotFoundPage() {
   const handleGoBack = () => {
@@ -7,7 +7,7 @@ export default function NotFoundPage() {
   };
 
   const handleGoHome = () => {
-    window.location.href = '/';
+    window.location.href = "/";
   };
 
   return (
@@ -27,7 +27,8 @@ export default function NotFoundPage() {
             Oops! Page Not Found
           </h2>
           <p className="text-lg text-gray-600 max-w-md mx-auto leading-relaxed">
-            The page you're looking for might have been moved, deleted, or never existed.
+            The page you're looking for might have been moved, deleted, or never
+            existed.
           </p>
         </div>
 
@@ -47,7 +48,7 @@ export default function NotFoundPage() {
             <ArrowLeft size={20} />
             Go Back
           </button>
-          
+
           <button
             onClick={handleGoHome}
             className="flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-200 shadow-md hover:shadow-lg"

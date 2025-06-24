@@ -1,8 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ExternalLink, ArrowRight, Github } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { ExternalLink, ArrowRight, Github } from "lucide-react";
 
-const CardProject = ({ Img, Title, Description, Features, Github: GithubLink, Link: ProjectLink, id }) => {
+const CardProject = ({
+  Img,
+  Title,
+  Description,
+  Features,
+  Github: GithubLink,
+  Link: ProjectLink,
+  id,
+}) => {
   const handleLiveDemo = (e) => {
     if (!ProjectLink) {
       e.preventDefault();
@@ -36,7 +44,9 @@ const CardProject = ({ Img, Title, Description, Features, Github: GithubLink, Li
               {Title}
             </h3>
 
-            <p className="text-gray-300/80 text-sm leading-relaxed">{Description}</p>
+            <p className="text-gray-300/80 text-sm leading-relaxed">
+              {Description}
+            </p>
 
             <ul className="text-sm text-gray-400 list-disc list-inside mt-2">
               {Features?.map((feature, index) => (
@@ -56,7 +66,9 @@ const CardProject = ({ Img, Title, Description, Features, Github: GithubLink, Li
                   Live Demo <ExternalLink className="w-4 h-4" />
                 </a>
               ) : (
-                <span className="text-gray-500 text-sm">Demo Not Available</span>
+                <span className="text-gray-500 text-sm">
+                  Demo Not Available
+                </span>
               )}
 
               {GithubLink && (
