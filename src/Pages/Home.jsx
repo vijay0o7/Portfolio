@@ -14,7 +14,7 @@ import "aos/dist/aos.css";
 // Memoized Components
 const StatusBadge = memo(() => (
   <div
-    className="inline-block animate-float"
+    className="hidden sm:inline-block animate-float"
     data-aos="zoom-in"
     data-aos-delay="400"
   >
