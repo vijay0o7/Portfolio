@@ -27,8 +27,8 @@ const CardProject = ({
 
   return (
     <div className="group relative w-full">
-      <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-white/10 shadow-2xl transition-all duration-300 hover:shadow-purple-500/20">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
+      <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-white/10 shadow-2xl transition-all duration-300 hover:shadow-cyan-500/20">
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/10 via-blue-500/10 to-purple-500/10 opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
 
         <div className="relative p-5 z-10">
           <div className="relative overflow-hidden rounded-lg">
@@ -40,7 +40,7 @@ const CardProject = ({
           </div>
 
           <div className="mt-4 space-y-2">
-            <h3 className="text-xl font-semibold bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 bg-clip-text text-transparent">
+            <h3 className="text-xl font-semibold bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">
               {Title}
             </h3>
 
@@ -61,7 +61,7 @@ const CardProject = ({
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={handleLiveDemo}
-                  className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors text-sm"
+                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-blue-300 transition-colors text-sm"
                 >
                   Live Demo <ExternalLink className="w-4 h-4" />
                 </a>
@@ -76,7 +76,7 @@ const CardProject = ({
                   href={GithubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-slate-400 hover:text-white text-sm"
+                  className="inline-flex items-center gap-2 text-slate-400 hover:text-cyan-400 text-sm"
                 >
                   GitHub <Github className="w-4 h-4" />
                 </a>

@@ -30,14 +30,14 @@ const TypewriterEffect = ({ text }) => {
 
 const BackgroundEffect = () => (
   <div className="absolute inset-0 overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 blur-3xl animate-pulse" />
-    <div className="absolute inset-0 bg-gradient-to-tr from-indigo-600/10 via-transparent to-purple-600/10 blur-2xl animate-float" />
+    <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 blur-3xl animate-pulse" />
+    <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/10 via-transparent to-cyan-600/10 blur-2xl animate-float" />
   </div>
 );
 
 const IconButton = ({ Icon }) => (
   <div className="relative group hover:scale-110 transition-transform duration-300">
-    <div className="absolute -inset-2 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-75 transition duration-300" />
+    <div className="absolute -inset-2 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full blur opacity-30 group-hover:opacity-75 transition duration-300" />
     <div className="relative p-3 bg-black/50 backdrop-blur-sm rounded-full border border-white/10">
       <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
     </div>
@@ -129,7 +129,7 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
                     <span
                       data-aos="fade-right"
                       data-aos-delay="200"
-                      className="inline-block px-2 bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent"
+                      className="inline-block px-2 bg-gradient-to-r from-white via-blue-100 to-cyan-200 bg-clip-text text-transparent"
                     >
                       Hello, I’m Vijay
                     </span>
@@ -138,14 +138,14 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
                     <span
                       data-aos="fade-up"
                       data-aos-delay="400"
-                      className="inline-block px-2 bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent"
+                      className="inline-block px-2 bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent"
                     >
                       Full-Stack & Android
                     </span>{" "}
                     <span
                       data-aos="fade-up"
                       data-aos-delay="600"
-                      className="inline-block px-2 bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent"
+                      className="inline-block px-2 bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent"
                     >
                       Developer
                     </span>
@@ -175,10 +175,10 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-full blur-md group-hover:blur-lg transition-all duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-full blur-md group-hover:blur-lg transition-all duration-300" />
                   <div className="relative flex items-center gap-2 text-lg sm:text-xl md:text-2xl">
-                    <Globe className="w-5 h-5 sm:w-6 sm:h-6 text-indigo-600" />
-                    <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                    <Globe className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
+                    <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
                       <TypewriterEffect text="www.Vijayportfolio.com" />
                     </span>
                   </div>
