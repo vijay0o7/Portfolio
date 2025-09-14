@@ -13,6 +13,7 @@ const Navbar = () => {
     { href: "#Contact", label: "Contact" },
   ];
 
+  // Scroll listener for navbar background + active section
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -45,10 +46,12 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Prevent background scroll when menu is open
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "unset";
   }, [isOpen]);
 
+  // Smooth scroll to section
   const scrollToSection = (e, href) => {
     e.preventDefault();
     const section = document.querySelector(href);
@@ -129,10 +132,8 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden transition-all duration-300 ease-in-out ${
-          isOpen
-            ? "max-h-screen opacity-100"
-            : "max-h-0 opacity-0 overflow-hidden"
+        className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${
+          isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <div className="px-4 py-6 space-y-4">
@@ -141,13 +142,13 @@ const Navbar = () => {
               key={item.label}
               href={item.href}
               onClick={(e) => scrollToSection(e, item.href)}
-              className={`block px-4 py-3 text-lg font-medium transition-all duration-300 ease ${
+              className={`block px-4 py-3 text-lg font-medium transition-all duration-500 ease-in-out ${
                 activeSection === item.href.substring(1)
                   ? "bg-gradient-to-r from-[#3b82f6] to-[#06b6d4] bg-clip-text text-transparent font-semibold"
                   : "text-[#e2d3fd] hover:text-white"
               }`}
               style={{
-                transitionDelay: `${index * 100}ms`,
+                transitionDelay: isOpen ? `${index * 100}ms` : "0ms",
                 transform: isOpen ? "translateX(0)" : "translateX(50px)",
                 opacity: isOpen ? 1 : 0,
               }}
