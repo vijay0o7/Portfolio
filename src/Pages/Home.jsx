@@ -162,7 +162,8 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#030014]" id="Home">
+    <div className="min-h-screen bg-[#030014] pt-20" id="Home">
+      {/* ⬆️ Added pt-20 to push hero below navbar */}
       <div
         className={`relative z-10 transition-all duration-1000 ${
           isLoaded ? "opacity-100" : "opacity-0"
