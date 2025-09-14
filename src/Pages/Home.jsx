@@ -150,7 +150,7 @@ const Home = () => {
   }, [handleTyping]);
 
   const lottieOptions = {
-    src: "https://lottie.host/58753882-bb6a-49f5-a2c0-950eda1e135a/NLbpVqGegK.lottie",
+    src: "https://lottie.host/d6000562-294a-4010-aa5f-c86d004741f4/Fe06iruOsr.lottie",
     loop: true,
     autoplay: true,
     style: { width: "100%", height: "100%" },
