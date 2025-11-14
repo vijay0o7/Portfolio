@@ -226,7 +226,7 @@ const AboutPage = () => {
 
             <div className="flex flex-col lg:flex-row items-center gap-4 w-full">
               <a
-                href="https://drive.google.com/file/d/1aHP2SrH-yZcq0TPQzebesBjNaLvo0Fpk/view?usp=sharing"
+                href="https://drive.google.com/file/d/1hr3YIE4mWfiPWJYn3wND9rvD8CICoHlK/view?usp=sharing"
                 className="w-full lg:w-auto"
               >
                 <button className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg bg-gradient-to-r from-[#2563eb] to-[#0ea5e9] text-white font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl animate-bounce-slow">
