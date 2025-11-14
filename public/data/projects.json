@@ -11,8 +11,25 @@
       "Integration with public transport and nearby police station info",
       "Emergency button widget on lock screen + geotag location sent to selected guardian."
     ],
+    "TechStack": ["React Native", "Firebase", "Node.js", "Google Maps API", "Socket.IO"],
+    "Link": "https://example.com/guardian-circle",
     "Github": "https://github.com/vijay0o7"
-
-}
-  
+  },
+  {
+    "id": "HabitVault",
+    "Title": "HabitVault – Daily Habit Tracker",
+    "Img": "/images/habitvault.jpg",
+    "Description": "HabitVault is a full-stack habit tracking app that helps users create, track, and maintain daily habits with streak visuals, reminders, and analytics. It supports authenticated users, habit categories, completion history, and interactive dashboards to visualize progress.",
+    "Features": [
+      "User authentication (signup / login) with JWT",
+      "Add / edit / delete habits with custom reminders",
+      "Daily check-ins with streak tracking and habit completion history",
+      "Visual dashboard with charts for weekly / monthly progress",
+      "Push and in-app reminders, and offline support with local sync",
+      "Export progress as CSV and share streaks"
+    ],
+    "TechStack": ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB", "Chart.js", "Vercel", "Heroku"],
+    "Link": "https://habit-vault-seven.vercel.app",
+    "Github": "https://github.com/Vijays77/HabitVault"
+  }
 ]
